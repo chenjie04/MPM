@@ -5,9 +5,9 @@ import numpy as np
 from tcn import TemporalConvNet
 
 
-class Multi_Granularity_Preference_Model(nn.Module):
+class Multi_Preference_Model(nn.Module):
     def __init__(self, nb_users, nb_items, embed_dim, history_size):
-        super(Multi_Granularity_Preference_Model, self).__init__()
+        super(Multi_Preference_Model, self).__init__()
 
         self.nb_users = nb_users
         self.nb_items = nb_items

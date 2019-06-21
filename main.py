@@ -17,7 +17,7 @@ import torch.nn as nn
 from torch import multiprocessing as mp
 
 import utils
-from MGPM import Multi_Granularity_Preference_Model
+from MPM import Multi_Preference_Model
 # from LSTM_MGPM import Multi_Granularity_Preference_Model
 from dataset import CFTrainDataset, load_test_ratings, load_test_negs
 from data_preprocess import (TEST_NEG_FILENAME, TEST_RATINGS_FILENAME,
@@ -209,7 +209,7 @@ def main():
              len(test_ratings)))
 
     # Create model
-    model = Multi_Granularity_Preference_Model(nb_users=nb_users, nb_items=nb_items,
+    model = Multi_Preference_Model(nb_users=nb_users, nb_items=nb_items,
                       embed_dim=32,history_size=9)
     print(model)
     print("{} parameters".format(utils.count_parameters(model)))
